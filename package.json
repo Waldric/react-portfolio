@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-awesome-reveal": "^4.3.1",
+    "react-tsparticles": "^2.12.2"
+  }
+}
