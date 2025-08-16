@@ -1,0 +1,14 @@
+.footer-section {
+  background-color: #f7f7f7;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-section .social-links a {
+  color: #333;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-section .social-links a:hover {
+  color: #494949;
+}

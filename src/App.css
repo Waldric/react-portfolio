@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {
@@ -34,5 +34,141 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.hero-v2__ctas {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+  will-change: transform;
+}
+
+/* solid primary */
+.btn--primary {
+  background: #111315;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.btn--ghost {
+  background: #ffffff;
+  color: #1f2330;
+  box-shadow: var(--shadow);
+  border: 1px solid #ececf1;
+}
+.btn--ghost:hover {
+  transform: translateY(-1px);
+  background: #f8f9fb;
+}
+
+@media (max-width: 640px) {
+  .hero-v2__ctas {
+    gap: 0.6rem;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+:root {
+  --reveal-dur: 0.8s;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: transform, opacity;
+}
+.reveal.in {
+  animation: fadeUp var(--reveal-dur) ease-out forwards;
+}
+.reveal-delay-1 {
+  animation-delay: 0.1s;
+}
+.reveal-delay-2 {
+  animation-delay: 0.2s;
+}
+.reveal-delay-3 {
+  animation-delay: 0.3s;
+}
+.btn,
+.project-btn {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.btn:hover,
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.12);
+}
+
+.project-card {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.25rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+@keyframes floatY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.float-slow {
+  animation: floatY 6s ease-in-out infinite alternate;
+}
+
+.animated-gradient {
+  background: linear-gradient(120deg, #0f172a, #2563eb, #06b6d4);
+  background-size: 200% 200%;
+  animation: moveGradient 12s ease-in-out infinite;
+}
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

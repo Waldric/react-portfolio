@@ -1,0 +1,147 @@
+:root {
+  --text: #111317;
+  --muted: #5c6670;
+  --bg: #ffffff;
+  --btn-dark: #111317;
+  --btn-dark-hover: #000000;
+  --btn-ghost: #eef0f3;
+  --btn-ghost-hover: #e6e9ee;
+  --blue: #0a2a8a;
+  --radius-xl: 28px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(2rem, 5vw, 4rem) 1.25rem;
+}
+
+.hero__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  min-height: 75vh;
+}
+
+.hero__title {
+  margin: 0 0 1rem 0;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  color: var(--text);
+
+  font-size: clamp(3rem, 10vw, 8.5rem);
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__lead {
+  margin-top: 2rem;
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 1.15rem);
+  line-height: 1.9;
+  color: var(--muted);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero__cta {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--dark {
+  background: var(--btn-dark);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: var(--btn-dark-hover);
+}
+
+.btn--ghost {
+  background: var(--btn-ghost);
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.btn--ghost:hover {
+  background: var(--btn-ghost-hover);
+}
+
+.hero__right {
+  justify-self: stretch;
+}
+
+.hero__portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) contrast(1.05) brightness(0.85);
+}
+
+@media (max-width: 980px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__right {
+    order: -1;
+  }
+  .hero__title {
+    font-size: clamp(3rem, 14vw, 6rem);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 84px;
+}
